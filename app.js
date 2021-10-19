@@ -86,6 +86,10 @@ button.addEventListener('click', function () {
         del.forEach((e, index) => {
             e.addEventListener('click', () => {
                 del[index].remove();
+                let store = localStorage.getItem('store');
+                let temp = JSON.parse(store);
+                temp.splice(index, 1);
+                localStorage.setItem('store', JSON.stringify(temp));
                 // console.log('delete this bitch')
             })
         })
@@ -140,6 +144,10 @@ if (temp != null && !refresh) {
     del.forEach((e, index) => {
         e.addEventListener('click', () => {
             del[index].remove();
+            let store = localStorage.getItem('store');
+            let temp = JSON.parse(store);
+            temp.splice(index, 1);
+            localStorage.setItem('store', JSON.stringify(temp));
             // console.log('delete this bitch')
         })
     })
