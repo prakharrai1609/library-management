@@ -16,6 +16,12 @@
         body {
             font-family: monospace;
         }
+
+        .dyn-height {
+            /* width: 100px; */
+            max-height: 2px;
+            overflow-y: scroll;
+        }
     </style>
 </head>
 
@@ -68,21 +74,22 @@
                 <legend class="col-form-label col-sm-2 pt-0">Type of book</legend>
                 <div class="col-sm-10" id="genre">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="Programming" id="type" value="option1"
+                        <input class="form-check-input" type="radio" name="radio" id="radio-box" value="Programming"
                             required>
                         <label class="form-check-label" for="programming">
                             Programming
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="Biographies" id="type" value="option2"
+                        <input class="form-check-input" type="radio" name="radio" id="radio-box" value="Biographies"
                             required>
                         <label class="form-check-label" for="biog">
                             Biographies
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="Language" id="type" value="option3" required>
+                        <input class="form-check-input" type="radio" name="radio" id="radio-box" value="Language"
+                            required>
                         <label class="form-check-label" for="language">
                             Language
                         </label>
@@ -103,7 +110,7 @@
                     <th scope="col">Delete</th>
                 </tr>
             </thead>
-            <tbody id="table-body"></tbody>
+            <tbody class="dyn-height" id="table-body"></tbody>
         </table>
     </div>
 
