@@ -11,6 +11,12 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <title>Library manager</title>
+
+    <style>
+        body {
+            font-family: monospace;
+        }
+    </style>
 </head>
 
 <body>
@@ -19,7 +25,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Library manager</a>
+            <a class="navbar-brand" href="#" style="font-family: monospace;">Library manager</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -27,9 +33,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <!-- <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link active" id="clear" aria-current="page" href="#">clear</a>
+                    </li>
                 </ul>
                 <form class="d-flex">
                     <input class="form-control me-2" id="search" type="search" placeholder="Search" aria-label="Search">
@@ -91,20 +97,13 @@
         <table class="table my-3">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
                     <th scope="col">Name</th>
                     <th scope="col">Author</th>
                     <th scope="col">Type</th>
+                    <th scope="col">Delete</th>
                 </tr>
             </thead>
-            <tbody id="table-body">
-                <!-- <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr> -->
-            </tbody>
+            <tbody id="table-body"></tbody>
         </table>
     </div>
 
